@@ -1,0 +1,262 @@
+/* indexportfolio.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1rem;
+    line-height: 1.6;
+    background-color: #1f1f1f; /* Fondo principal */
+    color: #fff; /* Texto en blanco */
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1f1f1f; /* Fondo del header */
+    color: white;
+    padding: 1% 0;
+    z-index: 1000;
+    box-shadow: 0 0.5% 1% rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1%;
+    padding-right: 1%;
+    flex-wrap: wrap;
+}
+
+header img {
+    height: 10vh;
+    margin-right: 2%;
+}
+
+header h1 {
+    margin: 0;
+    font-size: clamp(1rem, 8vw, 2rem);
+    display: inline-block;
+    vertical-align: middle;
+    color: white;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
+    flex-wrap: wrap;
+}
+
+header nav a {
+    color: white; /* Enlaces del menú */
+    text-decoration: none;
+    margin-left: 5%;
+    font-size: clamp(1rem, 1.5rem, 2rem); /* Ajuste dinámico */
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #ff8a50; /* Hover enlaces */
+}
+
+/* Espaciado para el contenido debajo del header */
+main {
+    padding-top: 10vh;
+    background-color: #1f1f1f; /* Fondo general */
+}
+
+/* Títulos */
+h2 {
+    color: #ff8a50; /* Color de los títulos */
+    margin-bottom: 5%;
+    font-size: clamp(5vw, 8vw, 20px);
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.5vw solid #1f1f1f; /* Línea del typing effect */
+    width: 0;
+    animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Sección de la Galería de Proyectos */
+.section-1, .section-2 {
+    padding: 8%;
+    margin-bottom: 5%;
+    border-radius: 1%;
+    box-shadow: 0 0.5% 1% rgba(0, 0, 0, 0.1);
+    width: 100%;
+    background-color: #333; /* Fondo de las secciones */
+    color: #fff;
+}
+
+.section-2 {
+    background-color: #444; /* Fondo alternativo */
+}
+
+/* Contenedor de los proyectos */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    max-width: 80vw;
+    padding: 5%;
+    background-color: #333; /* Fondo del contenedor */
+    border-radius: 1%;
+    box-shadow: 0 0.5% 1% rgba(0, 0, 0, 0.1);
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #fff;
+}
+
+.button {
+    display: inline-block;
+    padding: 5% 6%;
+    margin-top: 5%;
+    background-color: #ff8a50; /* Fondo del botón */
+    color: #1f1f1f; /* Texto del botón */
+    text-decoration: none;
+    font-size: clamp(16px, 6vw, 25px);
+    border-radius: 80px;
+    box-shadow: 0 0.5% 1% rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.5s ease;
+}
+
+.button:hover {
+    background-color: #e6734a; /* Hover del botón */
+}
+
+/* Proyectos */
+.proyectos-lista {
+    font-size: clamp(20px, 8vw, 40px);
+    color: #ff8a50; /* Títulos de lista */
+    font-weight: bold;
+    text-shadow: 3% 3% 8% rgba(0, 0, 0, 0.3);
+    margin-top: 5%;
+}
+
+/* Formulario */
+.formulario-seccion {
+    background-color: #333; /* Fondo del formulario */
+    padding: 8%;
+    color: #fff;
+    border-radius: 1%;
+    box-shadow: 0 0.5% 2% rgba(0, 0, 0, 0.2);
+    margin-top: 5%;
+    width: 95%;
+    max-width: 80vw;
+    margin-bottom: 5%;
+    text-align: left;
+    font-family: sans-serif;
+}
+
+.formulario-seccion h3 {
+    font-size: clamp(20px, 8vw, 30px);
+    color: #ff8a50; /* Títulos del formulario */
+    margin-bottom: 5%;
+}
+
+.formulario-seccion input,
+.formulario-seccion textarea {
+    width: 100%;
+    padding: 4%;
+    margin-bottom: 4%;
+    border-radius: 1%;
+    border: 0.5% solid #ddd;
+    font-size: clamp(14px, 4vw, 18px);
+    background-color: #1f1f1f; /* Fondo inputs */
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.formulario-seccion textarea {
+    height: 20vh;
+    resize: vertical;
+}
+
+.formulario-seccion button {
+    background-color: #ff8a50; /* Fondo del botón */
+    color: #1f1f1f;
+    font-size: clamp(16px, 5vw, 20px);
+    padding: 4% 8%;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formulario-seccion button:hover {
+    background-color: #e6734a; /* Hover del botón formulario */
+}
+
+.button-container {
+    margin-bottom: 5%;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: #1f1f1f; /* Fondo del footer */
+    color: white;
+    text-align: center;
+    padding: 2%;
+    margin-top: auto;
+}
+
+footer a {
+    color: #ff8a50; /* Links footer */
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #e6734a; /* Hover links footer */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    .button {
+        font-size: 8vw;
+    }
+
+    .formulario-seccion input,
+    .formulario-seccion textarea {
+        font-size: 5vw;
+    }
+
+    .proyectos-lista {
+        font-size: 8vw;
+    }
+}
